@@ -1,0 +1,62 @@
+CREATE TABLE Cliente (
+CPF VARCHAR(14) PRIMARY KEY,
+Nome VARCHAR(50),
+Nascimento DATE
+) ;
+
+CREATE TABLE Veículo (
+Placa VARCHAR(9) PRIMARY KEY,
+Veiculo VARCHAR(20),
+Cor VARCHAR(10),
+Diaria DECIMAL(10,2)
+) ;
+
+INSERT INTO Cliente (CPF, Nome, Nascimento) VALUES
+('123.456.789-01', 'Ariano Suassuna', '1022-05-21'),
+('543.765.987-23', 'Grace Hopper', '2002-04-29'),
+('987.654.231-90', 'Richard Feynman', '2001-10-12'),
+('432.765.678-67', 'Edgar Poe', '1998-12-14'),
+('927.384.284-44', 'Gordon Freeman', '1984-11-26');
+
+INSERT INTO Veículo (Placa, Veiculo, Cor, Diaria) VALUES
+('WER-3456', 'Fusca', 'Preto', 30.00),
+('FDS-8384', 'Variante', 'Rosa', 60.00),
+('CVB-9933', 'Comodoro', 'Preto', 20.00),
+('FGH-2256', 'Deloriam', 'Azul', 80.00),
+('DDI-3948', 'Brasília', 'Amarela', 45.00);
+
+CREATE TABLE Locação (
+Cód_locação INT PRIMARY KEY,
+Placa VARCHAR(9),
+CPF VARCHAR(14),
+Dias INT,
+TOTAL DECIMAL(10,2),
+FOREIGN KEY (Placa) REFERENCES Veículo(Placa),
+FOREIGN KEY (CPF) REFERENCES CPF(Cliente)
+) ; 
+
+INSERT INTO Locação (Cód_locação, Placa, CPF, Dias, Total) VALUES
+(101, 'WER-3456', '123.456.789-01', 3, 90.00),
+(102, 'FDS-8384', '543.765.987-23', 7, 420.00),
+(103, 'CVB-9933', '987.654.231-90', 1, 20.00),
+(104, 'FGH-2256', '432.765.678-67', 3, 240.00),
+(105, 'DDI-3948', '927.384.284-44', 7, 315.00);
+
+CREATE VIEW LocacoesDados AS
+	SELECT 
+		l.Cód_locação,
+		l.Dias,
+		l.TOTAL,
+		v.Placa,
+		v.Veiculo,
+		v.Cor,
+		v.Diaria,
+		c.CPF,
+		c.Nome,
+		c.Nascimento
+	FROM Locação l JOIN Veículo v ON l.Placa = v.Placa JOIN Cliente c ON l.CPF = c.CPF;
+    
+SELECT * FROM LocacoesDados;    
+SELECT * FROM Cliente;
+SELECT * FROM Veículo;
+SELECT * FROM Locação;
