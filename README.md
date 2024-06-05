@@ -16,6 +16,7 @@
    
 3) Escreva o script que cria as tabelas; [o arquivo está dentro desse repositório]
 4) Crie uma view que seleciona todas as locações e seus respectivos veículos e clientes. [o arquivo está dentro desse repositório]
+   ![Captura de tela 2024-06-04 202436](https://github.com/itsguisouza/Atividade-de-classe-13-05/assets/165524574/0cfda4a2-8d9f-4698-a955-4f62536e8d57)
 
 # Pré-requisitos
 
