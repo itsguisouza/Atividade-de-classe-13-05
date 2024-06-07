@@ -1,27 +1,27 @@
-# Atividade-de-classe-13-05 NORMALIZAÇÃO
+# Atividade-de-classe-13-05 FUNCTIONS
 
-# Descrição da atividade
+# Descrição da atividade 📝
 
-![image](https://github.com/itsguisouza/Atividade-de-classe-13-05/assets/165524574/76aa69fe-c962-43e3-af5c-9c2a1a827b22)
+SIGA OS ITENS ABAIXO PARA REALIZAÇÃO DA ATIVIDADE:
 
-1) Observe a tabela não normalizada de uma locadora de veículos e aplique a 3ª Forma normal;
-   
-![Captura de tela 2024-06-04 203338](https://github.com/itsguisouza/Atividade-de-classe-13-05/assets/165524574/fe870c0d-b181-4deb-b34e-79f04b1390b2)
-![Captura de tela 2024-06-04 203356](https://github.com/itsguisouza/Atividade-de-classe-13-05/assets/165524574/622e607f-daa0-4577-9122-af46ef6440dd)
-![Captura de tela 2024-06-04 203512](https://github.com/itsguisouza/Atividade-de-classe-13-05/assets/165524574/f43828e8-ca86-495a-af52-c16aba98f4ef)
-   
-2) Faça o modelo lógico de banco de dados relacional;
+- Crie um banco de dados para armazenar os dados dos alunos e cursos de uma universidade;
+- Cada curso pode pertencer a somente uma área;
+- Utilize Stored Procedures para automatizar a inserção e seleção dos cursos;
+- O aluno possui um e-mail que deve ter seu endereço gerado automaticamente no seguinte formato: nome.sobrenome@dominio.com
+- Crie uma rotina que recebe os dados de um novo curso e o insere no banco de dados;
+- Crie uma função que recebe o nome de um curso e sua área, em seguida retorna o id do curso;
+- Crie uma procedure que recebe os dados do aluno e de um curso e faz sua matrícula;
+- Caso o aluno já esteja matriculado em um curso, essa matrícula não pode ser realizada;
+- Crie o modelo lógico do exercício.
+  ![Captura de tela 2024-06-06 211828](https://github.com/itsguisouza/Atividade-de-classe-13-05/assets/165524574/c7cf59d0-5128-409a-93cc-2a0c37100f75)
 
-![Captura de tela 2024-06-04 205314](https://github.com/itsguisouza/Atividade-de-classe-13-05/assets/165524574/c1c26837-cf69-4d7d-b075-79b66ef151d1)
-   
-3) Escreva o script que cria as tabelas; [o arquivo está dentro desse repositório]
-4) Crie uma view que seleciona todas as locações e seus respectivos veículos e clientes. [o arquivo está dentro desse repositório]
-   ![Captura de tela 2024-06-04 202436](https://github.com/itsguisouza/Atividade-de-classe-13-05/assets/165524574/0cfda4a2-8d9f-4698-a955-4f62536e8d57)
+- Crie 200 registros diferentes de alunos;
+- Crie 25 tipos de cursos de uma universidade.
 
-# Pré-requisitos
+# Pré-requisitos ⚙️
 
-Para o exercício proposto foi usado o MYSQL Workbench, então o uso de uma IDE para banco de dados é o mínimo para a leitura do código criado.
+Para o exercício proposto foi usado o MYSQL Workbench, então o uso de uma IDE para banco de dados é o mínimo para a leitura do código criado. Toda a resolução da atividade está incluída neste repositorio com os arquivos.
 
-# Nome-RA
+# Nome-RA 🪪
 
 Guilherme Augusto Estefani Souza - 237306
